@@ -1,0 +1,43 @@
+# Carpetas temporales y de caché generadas por Unity
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+# Archivo de compilación interna de Android (necesario en Unity 6 y superiores)
+.utmp/
+
+# Archivos de registro y logs
+*.log
+
+# Archivos de soluciones de editores (Visual Studio / Rider / VS Code)
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.opendb
+*.VC.db
+
+# Carpetas de caché de código de Visual Studio
+.vs/
+.gradle/
+
+# Archivos temporales del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de respaldo de Blender (si usas Blender, los archivos .blend1 no son necesarios)
+*.blend1
+*.blend1.meta
+
+# Capturas de memoria
+*.wlt
