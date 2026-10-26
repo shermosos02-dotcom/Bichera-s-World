@@ -3,25 +3,22 @@ using UnityEngine.InputSystem;
 
 public class Agacharse : MonoBehaviour
 {
-    public float alturaAgachado = 0.5f;
-
     private bool agachado = false;
+    public float alturaAgachado = 0.4f;
 
     void Update()
     {
         if (Keyboard.current == null)
             return;
 
-        if (Keyboard.current.leftCtrlKey.wasPressedThisFrame && !agachado)
-        {
-            transform.Translate(Vector3.down * alturaAgachado, Space.Self);
+        if (Keyboard.current.leftCtrlKey.wasPressedThisFrame)
             agachado = true;
-        }
 
-        if (Keyboard.current.leftCtrlKey.wasReleasedThisFrame && agachado)
-        {
-            transform.Translate(Vector3.up * alturaAgachado, Space.Self);
+        if (Keyboard.current.leftCtrlKey.wasReleasedThisFrame)
             agachado = false;
-        }
+
+        transform.localScale = agachado
+            ? Vector3.one * alturaAgachado
+            : Vector3.one;
     }
 }
