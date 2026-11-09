@@ -148,12 +148,17 @@ public class Script : MonoBehaviour
 
         if (rellenoBarra != null)
         {
-            if (porcentaje > 0.5f)
+            if (porcentaje > 0.75f)
                 rellenoBarra.color = Color.green;
-            else if (porcentaje > 0.25f)
+            else if (porcentaje > 0.50f)
                 rellenoBarra.color = Color.yellow;
+            else if (porcentaje > 0.25)
+                rellenoBarra.color = Color.orange;
             else
+            {
                 rellenoBarra.color = Color.red;
+            }
+            
         }
     }
 }
